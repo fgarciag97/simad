@@ -1,0 +1,228 @@
+a, a:hover {
+    color: white;
+}
+.dashboard-Navbar>ul>li.horario {
+    width: 600px;
+    font-size: 18px;
+}
+@media (max-height: 768px) {
+    .dashboard-Navbar>ul>li.horario {
+        width: 600px;
+        font-size: 16px;
+    }
+}
+.dashboard-Navbar>ul>li.horario.m {
+    width: 600px;
+    font-size: 18px;
+    right: 20%;
+}
+@media (max-height: 768px) {
+    .dashboard-Navbar>ul>li.horario.m {
+        width: 600px;
+        font-size: 16px;
+        right: 15%;
+    }
+}
+/*=============================================================*/
+
+.rows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.container {
+    background: #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    width: 180px;
+    height: 105px;
+    border-radius: 5px
+}
+.container h3 {
+    color: #111;
+    margin: 0 0 25px;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+}
+.container-asignaciones {
+    background: #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px
+}
+.container-asignaciones h3 {
+    color: #111;
+    margin: 0 0 25px;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+}
+.container-anuncio {
+    background: #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px
+}
+.container-anuncio h3 {
+    color: #111;
+    margin: 0 0 25px;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+}
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+}
+.checkbox-container label {
+    background-color: #aaa;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease-out;
+    width: 45px;
+    height: 25px;
+    z-index: 2;
+}
+.checkbox-container label::after {
+    content: ' ';
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5px;
+    left: 1px;
+    transform: translateX(0);
+    transition: transform 0.3s linear;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+}
+.checkbox-container input {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+}
+.checkbox-container input:checked+label+.active-circle {
+    transform: translate(-50%, -50%) scale(15);
+}
+.checkbox-container input:checked+label::after {
+    transform: translateX(calc(100% + 0.5px));
+}
+.active-circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 10px), calc(-50% - 2px)) scale(0);
+    transition: transform 0.6s ease-out;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+.checkbox-container.green .active-circle, .checkbox-container.green input:checked+label {
+    background-color: #47B881;
+}
+.checkbox-container.yellow .active-circle, .checkbox-container.yellow input:checked+label {
+    background-color: #F7D154;
+}
+.checkbox-container.purple .active-circle, .checkbox-container.purple input:checked+label {
+    background-color: #735DD0;
+}
+/*======================================================================== */
+
+/* Pestañas para mostrar y ocultar secciones*/
+
+.tab {
+    overflow: hidden;
+    border: none;
+    opacity: 1;
+}
+.tabcontent {
+    display: none;
+    padding: 10px 15px;
+}
+#main-container {
+    margin: 5% auto auto auto;
+    width: 100%;
+    margin-right: 10%;
+}
+table {
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 20px;
+}
+thead {
+    background-color: #8B0000;
+    border-bottom: solid 5px #0F362D;
+    color: white;
+    border: solid 1px white;
+}
+.border {
+    border-radius: 2000px white;
+}
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+#main-container2 {
+    margin: 5% auto auto auto;
+    width: 90%;
+}
+table {
+    /*background-color: white;*/
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 20px;
+}
+thead {
+    background-color: #8B0000;
+    border-bottom: solid 5px #0F362D;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #FFF;
+}
+ul.fonde li {
+    background-color: #D98880;
+    border-radius: 5%;
+    border-color: white;
+    color: #fff;
+    border: white;
+    padding: 2px;
+}
+#display {
+    display: none
+}
+.catsandstars {
+    background-image: url("https://mdn.mozillademos.org/files/11991/startransparent.gif"), url("https://mdn.mozillademos.org/files/7693/catfront.png");
+    background-color: transparent;
+}
+table tr td #celda {
+    height: auto;
+    width: 200px;
+}

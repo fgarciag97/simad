@@ -1,0 +1,122 @@
+
+.full-box{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.top{
+	padding-top: 5%;
+}
+
+.dashboard-Navbar,
+.dashboard-Navbar > ul,
+.dashboard-Navbar > ul >li,
+.dashboard-Navbar > ul > li > a{
+	height: 50px;
+	line-height: 50px;
+}
+.dashboard-Navbar > ul > li > a{
+	outline: none;
+}
+.dashboard-Navbar{
+	background-color: #732608  ;
+	overflow: hidden;
+	z-index: 100000000
+}
+.dashboard-Navbar .pull-left{
+	float: left;
+	font-weight: 600;
+	left: 3%;
+}
+.dashboard-Navbar > ul >li,
+.dashboard-Navbar > ul > li > a{
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	transition: all .3s ease-in-out;
+	position: relative;
+}
+
+
+.dashboard-Navbar > ul > li > a:hover{
+	background-color: rgba(255, 255, 255, .4);
+	color: white;
+}
+.dashboard-Navbar > ul > li > a > span.badge{
+	position: absolute;
+	top: 7px;
+	right: 6px;
+	background-color: #FF5722;
+	transition: all .3s ease-in-out;
+}
+.dashboard-Navbar > ul > li > a:hover span.badge{
+	background-color: #FFF;
+	color: #333;
+}
+
+/*============ Estilos home*/
+.tile{
+	width: 15%;
+	height: 165px;
+	background-color: #fff;
+	color: rgba(43, 174, 168, 1);
+	position: relative;
+	display: inline-block;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, .2);
+	overflow: hidden;
+	cursor: pointer;
+	margin: 10px;
+}
+.tile:hover > .tile-icon > i{
+	color: rgba(255, 43, 43, 0.44)
+}
+
+.tile-title,
+.tile-icon,
+.tile-number{
+	position: absolute;
+}
+.tile-title{
+	height: 40px;
+	line-height: 40px;
+	font-size: 120%;
+	background-color:   #7f220d ;
+	color: #fff;
+	top: 0;
+	left: 0;
+}
+
+.tile:hover > .tile-title {
+	color: white;
+	font-weight: 800;
+	background: #7f180d;
+}
+
+@media (min-width: 800px) {
+	.tile-title{
+		font-size: 90%;
+	}
+}
+.tile-icon,
+.tile-number{
+	top: 20%;
+	height: 60%;
+}
+.tile-icon{
+	left: 0;
+}
+.tile-icon > i{
+	line-height: 140px;
+	font-size: 90px;
+}
+.tile-icon > i,
+.tile-number{
+	color: #dd4b39;
+	transition: all .3s ease-in-out;
+}

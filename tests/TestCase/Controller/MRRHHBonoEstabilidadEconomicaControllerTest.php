@@ -1,0 +1,33 @@
+<?php
+namespace App\Test\TestCase\Controller;
+
+use App\Controller\MRRHHBonoEstabilidadEconomicaController;
+use Cake\TestSuite\IntegrationTestTrait;
+use Cake\TestSuite\TestCase;
+
+/**
+ * App\Controller\MRRHHBonoEstabilidadEconomicaController Test Case
+ */
+class MRRHHBonoEstabilidadEconomicaControllerTest extends TestCase
+{
+    use IntegrationTestTrait;
+
+    /**
+     * Fixtures
+     *
+     * @var array
+     */
+    public $fixtures = [
+        'app.MRRHHBonoEstabilidadEconomica'
+    ];
+
+    /**
+     * Test initial setup
+     *
+     * @return void
+     */
+    public function testInitialization()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+}

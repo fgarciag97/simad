@@ -1,0 +1,94 @@
+<form action="" method="post" id="form_info">
+  <div class="modal fade" id="itemcompra" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+      <table class="table table-responsive table-border">
+
+      <thead>
+            <tr>
+              <th><h4 class="modal-title text-center">Actualización de Item</h4></th>
+              <th></th>
+            </tr>
+          </thead>
+      </table>
+
+      <table class="table table-responsive table-border">
+        
+        <?= $this->Form->hidden('id', ['class'=> 'form-control', 'required', 'id' => 'id']); ?>
+        <?= $this->Form->hidden('id_orden', ['class'=> 'form-control', 'required', 'id' => 'id_orden']); ?>
+        <?= $this->Form->hidden('requisicion', ['class'=> 'form-control', 'required', 'id' => 'requisicion']); ?>
+
+          <tr>
+              <td>
+                <div id="" class="input-group" on>
+                    <span class="input-group-addon"> Unidad Solicitante</span>
+                    <?= $this->Form->select('unidad_solicitante', @$us, ['empty' => '--Seleccione--', 'class'=> 'form-control', 'required', 'id' => 'unidad_solicitante']); ?>
+                </div>
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                <div id="" class="input-group" on>
+                    <span class="input-group-addon"> Descripcion del Items</span>
+                    <input type="text" class="form-control" id="descripcion_item" name="descripcion_item">
+                </div>
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                <div id="" class="input-group" on>
+                    <span class="input-group-addon"> Partida</span>
+                    <?= $this->Form->select('id_partida', @$partidas, ['empty' => '--Seleccione--', 'label' => false, 'class'=> 'form-control', 'required', 'id' => 'id_partida_2', 'onchange' => 'cargar_descripcion_partida(this);']); ?>
+                </div>
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                <div id="" class="input-group" on>
+                    <span class="input-group-addon">Descripción de la Partida</span>
+                    <input type="text" name="descripcion_partida" id="descripcion_partida_2" class="form-control" readonly>
+                </div>
+              </td>
+          </tr>
+
+      </table>
+
+      <table class="table table-responsive border">
+        <tr>
+            <td>
+                <div id="" class="input-group" on>
+                    <span class="input-group-addon"> Cantidad</span>
+                    <input type="text" class="form-control" id="cantidad2" name="cantidad">
+                </div>
+            </td>
+
+            <td>
+                <div id="" class="input-group" on>
+                    <span class="input-group-addon"> Unidad de Medida</span>
+                    <input type="text" class="form-control" id="unidad_medida2" name="unidad_medida">
+                </div>
+            </td>
+
+            <td>
+                <div id="" class="input-group" on>
+                    <span class="input-group-addon"> Precio Unitario</span>
+                    <input type="text" class="form-control" id="precio_unitario2" name="precio_unitario">
+                </div>
+            </td>
+        </tr>
+      </table>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Salir</button>
+           <button type="submit" class="btn btn-success btn-sm pull-right">Actualizar</
+        </div>
+      </div>
+    </div>
+  </div>
+   </div><
+</div>
+</div>
+ </form>

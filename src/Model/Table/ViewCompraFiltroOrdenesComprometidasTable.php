@@ -1,0 +1,78 @@
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+/**
+ * ViewCompraFiltroOrdenesComprometidas Model
+ *
+ * @method \App\Model\Entity\ViewCompraFiltroOrdenesComprometida get($primaryKey, $options = [])
+ * @method \App\Model\Entity\ViewCompraFiltroOrdenesComprometida newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\ViewCompraFiltroOrdenesComprometida[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\ViewCompraFiltroOrdenesComprometida|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\ViewCompraFiltroOrdenesComprometida saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\ViewCompraFiltroOrdenesComprometida patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\ViewCompraFiltroOrdenesComprometida[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\ViewCompraFiltroOrdenesComprometida findOrCreate($search, callable $callback = null, $options = [])
+ */
+class ViewCompraFiltroOrdenesComprometidasTable extends Table
+{
+    /**
+     * Initialize method
+     *
+     * @param array $config The configuration for the Table.
+     * @return void
+     */
+    public function initialize(array $config)
+    {
+        parent::initialize($config);
+
+        $this->setTable('view_compra_filtro_ordenes_comprometidas');
+    }
+
+    /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
+    public function validationDefault(Validator $validator)
+    {
+        $validator
+            ->integer('requisicion')
+            ->allowEmptyString('requisicion');
+
+        $validator
+            ->scalar('tipo')
+            ->allowEmptyString('tipo');
+
+        $validator
+            ->integer('proveedor')
+            ->allowEmptyString('proveedor');
+
+        $validator
+            ->scalar('proveedor_denominacion')
+            ->allowEmptyString('proveedor_denominacion');
+
+        $validator
+            ->integer('id_registro')
+            ->allowEmptyString('id_registro');
+
+        $validator
+            ->integer('status')
+            ->allowEmptyString('status');
+
+        $validator
+            ->date('fecha')
+            ->allowEmptyDate('fecha');
+
+        $validator
+            ->decimal('monto')
+            ->allowEmptyString('monto');
+
+        return $validator;
+    }
+}
